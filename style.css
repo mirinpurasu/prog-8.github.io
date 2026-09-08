@@ -1,0 +1,54 @@
+/*基本設定*/
+@charset "UTF-8";
+html{
+    font-size: 100%;
+}
+body{
+    color: #707070; /*文字色*/
+    font-family: sans-serif; /*フォント*/
+}
+img{
+    max-width: 100%; /*最大横幅(親要素はみ出し防止)*/
+    vertical-align: bottom; /*縦方向揃え方ー下揃え(画像下隙間削除)*/
+}
+li{
+    list-style: none; /*リスト先頭マーククリア*/
+}
+a{
+    color: #707070; /*文字色*/
+    text-decoration: none; /*文字装飾*/
+}
+a:hover{
+    opacity: 0.7; /*透明度*/
+}
+@media screen and (max-width:767px) { /*(PCメイン)スマホ用CSS上書き*/
+}
+/*@media screen and (min-width:1025px) { } (PCメイン)スマホ用CSS上書き*/
+
+
+/*CSS*/
+wrap{
+    max-width: 1000px;
+    padding: 0 20px; /*左右余白20px*/
+    margin: 0 auto;  /*中央寄せ*/
+}
+#header{
+    display: flex; /*横並び*/
+    align-items: center; /*縦方向中央寄せ*/
+    justify-content: space-between; /*横方向金等割り(2要素時、両端配置)*/
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .logo{
+        max-width: 190px;
+        line-height: 0; /*h1使用時の余白を削除*/
+    }
+    .header-nav{
+        display: flex;
+        align-items: center; /*縦方向中央寄せ*/
+        gap:40px; /*navメニュー同士余白*/
+        li{
+            font-size: 14px;
+        }
+    }
+}
